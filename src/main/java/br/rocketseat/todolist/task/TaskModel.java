@@ -30,4 +30,12 @@ public class TaskModel {
     private LocalDateTime createAt;
 
     private UUID idUser;
+
+    public void setTitle(String title) throws Exception {
+        if (title.length() > 50) {
+            throw new Exception("Campo title deve conter no maximo 50 car");
+        }
+
+        this.title = title;
+    }
 }
